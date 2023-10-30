@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  background-color: #00FF00;
+  }
+  p { color:#000000; }
+
+input[type=text], input[type=password], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #000000;
+}
+
+input[type=submit] {
+  background-color: #0033FF;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #FF0000;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #000000;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2 align="center">Registration Form</h2>
+<p>Enter your Details.</p>
+
+<div class="container">
+  <form action="fromconn.php" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><b>&nbsp;&nbsp;&nbsp;Name:</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="name" placeholder="Your name">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Email"><b>&nbsp;&nbsp;&nbsp;Email:</b></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="Email" name="email" placeholder="Your Email">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="Password"><b>&nbsp;&nbsp;&nbsp;Password:</b></label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="password" name="password" placeholder="Enter your Password">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="Gender"><b>&nbsp;&nbsp;&nbsp;Gender:</b></label>
+      </div>
+      <div class="col-75">
+	  <input type="radio" id="Male" name="gender" value="Male">
+  <label for="Male">Male</label>
+  <input type="radio" id="Female" name="gender" value="Female">
+  <label for="Female">Female</label>
+</div>
+</div>
+  <div class="row">
+      <div class="col-25">
+        <label for="Languages"><b>&nbsp;&nbsp;&nbsp;Languages:</b></label>
+      </div>
+      <div class="col-75">
+  <input type="checkbox" id="Tamil" name="lang" value="Tamil">
+  <label for="l1">I know Tamil</label>
+  <input type="checkbox" id="English" name="lang" value="English">
+  <label for="l2"> I know English</label>
+  <input type="checkbox" id="TE" name="lang" value="TE">
+  <label for="TE">Both Tamil And English</label>
+  </div>
+ </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Qualification"><b>&nbsp;&nbsp;&nbsp;Qualification:</b></label>
+      </div>
+      <div class="col-75">
+        <select id="Qualification" name="qualification">
+		<option value="null">Select</option>
+          <option value="BE/B-tech">Be/B-tech</option>
+          <option value="ME/M-tech">Me/M-tech</option>
+          <option value="MCA">MCA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject"><b>&nbsp;&nbsp;&nbsp;Address:</b></label>
+      </div>
+      <div class="col-75">
+        <textarea id="Address" name="address" placeholder="Enter your Address" style="height:100px"></textarea>
+      </div>
+	      <div align="left" class="row">
+      <input type="submit" value="Submit" style="float:left">
+    </div><br>
+    </div><br>
+
+  </form>
+</div>
+
+</body>
+</html>
